@@ -14,11 +14,11 @@
 .section-parceiros {
     background-color: white;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 1200px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: left; 
 }
 
@@ -79,6 +79,25 @@ h2 {
     line-height: 1.5;  /* Espaçamento entre linhas da descrição */
     font-weight: 300;
 }
+
+/* ìcones do Github e LinkedIn */
+.dev-icons {
+    margin-top: 10px; /* Espaçamento acima dos ícones */
+  }
+  
+  .dev-icon {
+    font-size: 1.5rem; /* Tamanho dos ícones */
+    margin: 0 5px; /* Espaçamento entre os ícones */
+    color: rgb(170, 170, 170); /* Cor dos ícones */
+    transition: color 0.3s ease; /* Transição suave na cor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .dev-icon:hover {
+    color: #217e80; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.50); /* Aumenta o tamanho em 5% */
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  }
 
 
 .parceiros-logos {

@@ -1,22 +1,17 @@
 import React from 'react';
+import './ProductDetails.css';
 
-const ProductDetails = ({ produto }) => { // Recebe o produto como prop
-  if (!produto) {
-    return <div>Carregando...</div>; // Exibe uma mensagem de carregamento enquanto o produto não é carregado.
-  }
-
+const ProductDetails = ({ produto, supermercados, isLowestPrice }) => {
+  const supermercadoNome = supermercados[produto.supermercado] || 'Supermercado Desconhecido';
 
   return (
-    <div>
-      {/* Exibe os detalhes do produto */}
-      <h2>{produto.nome}</h2>
-      <p>Descrição: {produto.descricao || "Sem descrição"}</p>
+    <div className={`product-card ${isLowestPrice ? 'highlight' : ''}`}> {/* Aplica highlight somente ao menor preço */}
+      <img src={produto.imagem} alt={produto.nome} width="100" />
+      <h3>{produto.nome}</h3>
       <p>Preço: R$ {produto.preco}</p>
-      <p>Estabelecimento: {produto.estabelecimento || "Não informado"}</p>
-        {/* Exibir outras informações do produto, como imagem, etc. */}
+      <p>Supermercado: {supermercadoNome}</p>
     </div>
   );
 };
-
 
 export default ProductDetails;

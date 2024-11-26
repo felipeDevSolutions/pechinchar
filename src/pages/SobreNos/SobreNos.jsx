@@ -2,15 +2,15 @@
 import React from 'react';
 import './SobreNos.css';
 
-// Importe as imagens dos desenvolvedores
+// Importação das imagens dos desenvolvedores
 import dev1 from '../../static/dev1.png';
-import dev2 from '../../static/dev2.png';
-import dev3 from '../../static/dev3.png';
-import dev4 from '../../static/dev4.png';
-import dev5 from '../../static/dev5.png';
+import dev2 from '../../static/dev2.jpeg';
+import dev3 from '../../static/dev3.jpeg';
+import dev4 from '../../static/dev4.jpg';
+import dev5 from '../../static/dev5.jpeg';
 
 
-// Importe as imagens dos parceiros
+// Importação das imagens dos parceiros
 import parceiro1 from '../../static/parceiro1.png';
 import parceiro2 from '../../static/parceiro2.png';
 import parceiro3 from '../../static/parceiro3.png';
@@ -22,15 +22,44 @@ import parceiro8 from '../../static/parceiro8.png';
 import parceiro9 from '../../static/parceiro9.png';
 import parceiro10 from '../../static/parceiro10.png';
 
+// Importação dos ícones do LinkedIn e GitHub
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+
 
 
 const SobreNos = () => {
   const desenvolvedores = [
-    { nome: 'Desenvolvedor 1', foto: dev1, descricao: 'Descrição do Desenvolvedor 1. Habilidades e experiência.' },
-    { nome: 'Desenvolvedor 2', foto: dev2, descricao: 'Descrição do Desenvolvedor 2. Habilidades e experiência.' },
-    { nome: 'Desenvolvedor 3', foto: dev3, descricao: 'Descrição do Desenvolvedor 3. Habilidades e experiência.' },
-    { nome: 'Desenvolvedor 4', foto: dev4, descricao: 'Descrição do Desenvolvedor 4. Habilidades e experiência.' },
-    { nome: 'Desenvolvedor 5', foto: dev5, descricao: 'Descrição do Desenvolvedor 5. Habilidades e experiência.' },
+
+    {
+      nome: 'Felipe Ramalho',
+      foto: dev1,
+      linkedin: 'https://www.linkedin.com/in/felipe-ramalho/', // URL do LinkedIn
+      github: 'https://www.linkedin.com/in/felipercostadeveloper/', // URL do GitHub
+    },
+    {
+      nome: 'Ricardo Vieira',
+      foto: dev2,
+      linkedin: 'https://www.linkedin.com/in/felipe-ramalho/', // URL do LinkedIn
+      github: 'https://github.com/RicardoVCampos', // URL do GitHub
+    },
+    {
+      nome: 'João Victor de Morais',
+      foto: dev3,
+      linkedin: 'https://www.linkedin.com/in/felipe-ramalho/', // URL do LinkedIn
+      github: 'https://github.com/Jota-pro', // URL do GitHub
+    },
+    {
+      nome: 'Ezequiel Cardoso',
+      foto: dev4,
+      linkedin: 'https://www.linkedin.com/in/felipe-ramalho/', // URL do LinkedIn
+      github: 'https://github.com/eeezql', // URL do GitHub
+    },
+    {
+      nome: 'José Vitor Ferreira',
+      foto: dev5,
+      linkedin: 'https://www.linkedin.com/in/felipe-ramalho/', // URL do LinkedIn
+      github: 'https://github.com/vtr096', // URL do GitHub
+    },
   ];
 
   const parceiros = [
@@ -64,13 +93,20 @@ const SobreNos = () => {
       <section className="section-desenvolvedores">
         <h2>Desenvolvedores</h2>
         <div className="desenvolvedores-container">
-          {desenvolvedores.map((dev, index) => (
+        {desenvolvedores.map((dev, index) => (
             <div className="desenvolvedor" key={index}>
-              <img src={dev.foto} alt={dev.nome} className="dev-foto" />
-              <h3>{dev.nome}</h3>
-              <p>{dev.descricao}</p>
+            <img src={dev.foto} alt={dev.nome} className="dev-foto" />
+            <h3>{dev.nome}</h3>
+            <div className="dev-icons"> {/* Container para os ícones */}
+                <a href={dev.linkedin} target="_blank" rel="noopener noreferrer"> {/* Ícone do LinkedIn */}
+                <FaLinkedin className='dev-icon'/>
+                </a>
+                <a href={dev.github} target="_blank" rel="noopener noreferrer"> {/* Ícone do GitHub */}
+                <FaGithub className='dev-icon'/>
+                </a>
             </div>
-          ))}
+            </div>
+        ))}
         </div>
       </section>
 

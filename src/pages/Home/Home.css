@@ -1,76 +1,134 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: sans-serif;
-    min-height: calc(100vh - 120px);
-    background-color: whitesmoke; /*fundo*/
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  min-height: calc(100vh - 120px);
+  background-color: whitesmoke; /*fundo*/
+
+}
+
+h1{
+  color: #3b5f5a;
+  margin: 20px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column; /* Itens alinhados verticalmente */
+  align-items: center;
+  width: 100%;
+  max-width: 100%; /* Largura máxima para telas maiores */
+  background-color: #d1ebe8; /* Cor de fundo suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+
+}
+
+.search-container-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%; /* Largura máxima para telas maiores */
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+
+
+input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Borda mais arredondada */
+  width: 60%;
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+li:hover {
+  transform: translateY(-3px); /* Move ligeiramente para cima ao passar o mouse */
+}
+
+
+button {
+  background-color: #38a3a5; /* Cor de fundo mais vibrante */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease; /* Transição suave */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+
   }
 
-  h1{
-    color: #3b5f5a;
-    margin: 20px;
+  button:hover {
+      background-color: #007a74; /* Cor mais escura ao passar o mouse */
   }
-  
-  .search-container {
-    display: flex;
-    flex-direction: column; /* Itens alinhados verticalmente */
-    align-items: center;
+
+
+.product-price {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.product-list-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px; 
+  width: 100%;
+  margin-top: 30px;
+}
+
+.supermercado-section {
+  display: flex; /* adicionado */
+  flex-wrap: wrap; /* adicionado */
+  justify-content: center; /* adicionado */
+  margin-bottom: 20px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap; /* Remove, pois já está no container pai */
+  justify-content: center;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 5px; /* Espaço menor */
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  min-height: 200px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 100px;
+    margin-bottom: 10px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .product-card {
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .product-card {
     width: 100%;
-    max-width: 100%; /* Largura máxima para telas maiores */
-    background-color: #d1ebe8; /* Cor de fundo suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-
   }
-
-  .search-container-field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%; /* Largura máxima para telas maiores */
-    margin-bottom: 15px;
-    gap: 10px;
-  }
-  
-
-  
-  input[type="text"] {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px; /* Borda mais arredondada */
-    width: 60%;
-    box-sizing: border-box; /* Inclui padding e border no tamanho total */
-    font-size: 16px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  li:hover {
-    transform: translateY(-3px); /* Move ligeiramente para cima ao passar o mouse */
-  }
-  
-
-  button {
-    background-color: #38a3a5; /* Cor de fundo mais vibrante */
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.2s ease; /* Transição suave */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-
-    }
-
-    button:hover {
-        background-color: #007a74; /* Cor mais escura ao passar o mouse */
-    }
-  
-  
-  .product-price {
-    font-weight: bold;
-    margin-top: 5px;
-  }
+}
